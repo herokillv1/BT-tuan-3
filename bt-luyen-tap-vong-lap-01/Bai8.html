@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai8</title>
+</head>
+<body>
+
+<button type="button" id="lol" style="width: 500px;height: 500px;background-color: blue" onclick="bamVao()" >
+    <span style="font-size:200px">Chơi</span>
+</button>
+<script>
+    function bamVao() {
+        let a = +prompt('Nhập số bắt đầu');
+        let b = +prompt('Nhập số kết thúc');
+        let c = +prompt('Chọn 1 số ngẫu nhiên trong khoảng vừa chọn');
+        let x = Math.floor(Math.random() * (b-a+1)) + a;
+        for (i=1;i<=3;i++){
+            if (c==x){
+                alert('Win');
+                break;
+            }else if (c<x){
+                alert(c+'< số ngẫu nhiên')
+                c = +prompt('Chọn 1 số ngẫu nhiên trong khoảng vừa chọn');
+            }else {
+                alert(c+'> số ngẫu nhiên')
+                c = +prompt('Chọn 1 số ngẫu nhiên trong khoảng vừa chọn');
+            }
+        }
+
+    }
+</script>
+</body>
+</html>

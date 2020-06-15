@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai2</title>
+</head>
+<body>
+<script>
+    let bodyTemperature = +prompt('Nhập số nhiệt độ cơ thể');
+    for (;;){
+        if (bodyTemperature>100){
+            alert('Giảm nhiệt độ');
+            bodyTemperature = +prompt('Nhập số nhiệt độ cơ thể');
+        }else if (bodyTemperature<20){
+            alert('Tăng nhiệt độ');
+            bodyTemperature = +prompt('Nhập số nhiệt độ cơ thể');
+        }else {
+            alert('Nhiệt độ cơ thể là : '+bodyTemperature);
+            break;
+        }
+    }
+</script>
+</body>
+</html>
