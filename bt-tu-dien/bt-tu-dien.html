@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bt-tu-dien</title>
+</head>
+<body>
+
+<h1>Từ điển Anh - Việt</h1>
+<br>
+<h3>Nhập từ cần dịch</h3>
+
+<input type="text" id="lol">
+<br>
+<br>
+<button onclick="ngu()">Dịch</button>
+<br>
+<br>
+<input type="text" id="kok" placeholder="Kết Quả" style="width: 350px;" disabled>
+
+<script>
+    function ngu() {
+        let eng = ['hello','goodbye','morning','noon','afternoon','night','storm','fire'];
+        let vn = ['Xin Chào','Tạm Biệt','Buổi Sáng','Buổi Trưa','Buổi Chiều','Buổi Tối','Bão','Lửa'];
+        let a = document.getElementById('lol').value;
+
+        for (let i=0;i<eng.length;i++){
+            if (a===eng[i]){
+                document.getElementById('kok').value = vn[i];
+                break;
+            }else {
+                document.getElementById('kok').value = 'Từ điển có 2 từ thôi bạn ôi :)';
+            }
+        }
+
+    }
+
+</script>
+
+</body>
+</html>
