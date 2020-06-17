@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai3</title>
+</head>
+<body>
+
+<script>
+    function display(){
+    let a=0;
+    let x = new Array(+prompt('Nhập chiều dài mảng')).fill(new Array(+prompt('Nhập chiều cao bảng')));
+    for (i=0;i<x.length;i++){
+        for (j=0;j<x[i].length;j++){
+            x[i][j]= prompt('Nhập ký tự dòng '+i+' cột '+j);
+            document.write(x[i][j]+',');
+            if (!isNaN(x[i][j])){
+                a++;
+            }
+        }   document.write('<br>');
+    }
+    return a;
+    }
+
+    let arr = new Array();
+    document.write('<br>Số ký tự số trong mảng là : '+display(arr));
+
+
+
+</script>
+
+
+</body>
+</html>
