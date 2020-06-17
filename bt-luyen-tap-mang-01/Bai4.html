@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai4</title>
+</head>
+<body>
+<script>
+
+    function inputArr(a) {
+        let sizeArr;
+        do {
+            sizeArr = +prompt('Nhập kích thước mảng');
+        }while (sizeArr<=0);
+
+
+        for (let i=0;i<sizeArr;i++){
+            a[i] = Math.floor(Math.random()*20) ;
+        }
+    }
+
+    function displayArr(a) {
+        for (let i=0;i<a.length;i++){
+            document.write(a[i]+' ');
+        }
+    }
+
+
+
+    let arr = new Array();
+    inputArr(arr);
+    displayArr(arr);
+    document.write('<br>Mảng sau khi đảo ngược : '+arr.reverse('+'));
+
+
+
+
+
+</script>
+
+</body>
+</html>

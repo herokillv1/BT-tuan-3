@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai1+2+3</title>
+</head>
+<body>
+
+<script>
+
+    function inputArr(a) {
+        let sizeArr;
+        do {
+            sizeArr = +prompt('Nhập kích thước mảng');
+        }while (sizeArr<=0);
+
+
+        for (let i=0;i<sizeArr;i++){
+            a[i] = Math.floor(Math.random()*30);
+        }
+    }
+
+    function displayArr(a) {
+        for (let i=0;i<a.length;i++){
+            document.write(a[i]+' ');
+        }
+    }
+
+    function compare(a){
+        let x =0;
+        for (i=0;i<a.length;i++){
+            if (a[i]>=10){
+                document.write(a[i]+' ');
+                x++;
+            }
+        }
+        return x;
+    }
+
+    let maxPosition;
+    let maxValue;
+
+    function maxArr(a){
+        let x='';
+        let max = a[0];
+        for (i=0;i<a.length;i++){
+            if (max<a[i]){
+                max=a[i];
+                maxPosition=max;
+                maxValue=i;
+            }
+        }
+        return x;
+    }
+
+    function average(a){
+        let sum=0;
+        let y=0;
+        for (i=0;i<a.length;i++){
+            sum+=a[i];
+        }
+        y=sum/i;
+        return y;
+    }
+
+
+
+
+    let arr = new Array();
+    inputArr(arr);
+    displayArr(arr);
+
+
+    document.write('<br>Các số >=10 trong mảng là : ')
+    document.write("<br> Có " + compare(arr) + " số trong mảng >= 10");
+    document.write(maxArr(arr));
+    document.write('<br>Số lớn nhất trong mảng là : '+maxPosition+'<br>Có vị trí trong mảng là : '+maxValue);
+    document.write('<br>Trung bình của mảng là : '+average(arr));
+
+
+</script>
+
+</body>
+</html>
