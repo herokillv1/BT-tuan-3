@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai5</title>
+</head>
+<body>
+
+<h1>Ngôi sao và Chòm sao</h1>
+<br>
+<h3>Nhập tên ngôi sao</h3>
+
+<input type="text" id="lol" oninput="ngoiSao(this.value)" onchange="ngoiSao(this.value)">
+<br>
+<br>
+<input type="text" id="kok" placeholder="Chòm sao tương ứng" style="width: 350px;" disabled>
+
+<script>
+    function ngoiSao() {
+        let x = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe' , 'Regulus'];
+        let y = ['Ursa Minor','Tarurus','Cygnus','Lyra','Aquila','Ursa Major','Leo'];
+        let a = document.getElementById('lol').value;
+
+        for (let i=0;i<x.length;i++){
+            if (a==x[i]){
+                document.getElementById('kok').value = y[i];
+                break;
+            }else {
+                document.getElementById('kok').value = 'Không có ngôi sao này bạn ôi :)))))';
+            }
+        }
+
+    }
+
+</script>
+
+</body>
+</html>
