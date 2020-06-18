@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>th-tao-va-goi-ham</title>
+</head>
+<body>
+
+<script>
+    function processConfirm(answer) {
+        let result = "";
+        if (answer) {
+            result = "Ha ha ha . Ko có quà gì đâu";
+        } else {
+            result = "Sao lại ko bấm ok để nhận quà";
+        }
+        return result;
+    }
+
+    let confirmAnswer = confirm("Bấm nút để nhận quà");
+    let theAnswer = processConfirm(confirmAnswer);
+    alert(theAnswer);
+</script>
+
+</body>
+</html>
