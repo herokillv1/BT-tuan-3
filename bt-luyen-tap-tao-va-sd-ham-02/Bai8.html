@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai8</title>
+</head>
+<body>
+
+<script>
+    function inputArr(a) {
+        let sizeArr;
+        do {
+            sizeArr = +prompt('Nhập kích thước mảng');
+        }while (sizeArr<=0);
+
+
+        for (let i=0;i<sizeArr;i++){
+            do {
+                a[i] = +prompt('Nhập số thứ '+i) ;
+            }while (a[i]%1!=0)
+        }
+    }
+
+    function displayArr(a) {
+        for (let i=0;i<a.length;i++){
+            document.write(a[i]+' ');
+        }
+    }
+
+    let arr = new Array();
+    inputArr(arr);
+    displayArr(arr);
+    document.write('<br>');
+    document.write('Mảng sau khi đảo ngược : '+arr.reverse());
+
+
+</script>
+
+</body>
+</html>

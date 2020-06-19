@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai5</title>
+</head>
+<body>
+
+<script>
+    function inputArr(a) {
+        let sizeArr=3
+        for (let i=0;i<sizeArr;i++){
+            a[i] = +prompt('Nhập số thứ '+i) ;
+        }
+    }
+
+    function displayArr(a) {
+        for (let i=0;i<a.length;i++){
+            document.write(+a[i]+' ; ');
+        }
+    }
+    
+    function compare(a) {
+        let min=a[0];
+        for (i=0;i<a.length;i++){
+            if (min>a[i]){
+                min=a[i]
+                document.write('<br>Số nhỏ nhất là : '+min);
+                break;
+            }
+        }return min;
+    }
+
+    let arr = new Array();
+    inputArr(arr);
+    document.write('Ba số đã nhập là : ');
+    displayArr(arr);
+    compare(arr);
+
+</script>
+
+</body>
+</html>

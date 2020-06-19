@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai9</title>
+</head>
+<body>
+
+<script>
+    function inputArr(a) {
+        let sizeArr;
+        do {
+            sizeArr = +prompt('Nhập kích thước mảng');
+        }while (sizeArr<=0);
+
+
+        for (let i=0;i<sizeArr;i++){
+                a[i] =  prompt('Nhập phần tử thứ '+i) ;
+        }
+    }
+
+    function displayArr(a) {
+        for (let i=0;i<a.length;i++){
+            document.write(a[i]+' ');
+        }
+    }
+    
+    function checkCount(a) {
+        let x= prompt('Nhập vào ');
+        let count = 0;
+        for (let i=0;i<a.length;i++){
+            if (x==a[i]){
+                count++;
+            }
+        }return count;
+    }
+
+    function result(a){
+        let count = checkCount(a);
+        if (count>0){
+            document.write('Số lần xuất hiện của phần tử vừa nhập vào là : '+count);
+        }else {
+            document.write('-1');
+        }
+    }
+
+    let arr = new Array();
+    inputArr(arr);
+    displayArr(arr);
+    document.write('<br>');
+    result(arr);
+
+
+
+</script>
+
+</body>
+</html>
