@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bt-ham-kiem-tra-so-nguyen-to</title>
+</head>
+<body>
+
+<script>
+    function isPrime(a) {
+        if (a<2){
+            return false;
+        } for (let i=2;i<=Math.sqrt(a);i++){
+            if (a%i==0){
+                return false;
+            }
+        }return true;
+    }
+
+    function display() {
+        for (let i=1;i<=1000;i++){
+            if (isPrime(i)==true){
+                document.write(i+'<br>');
+            }
+        }
+    }
+
+    function checkPrime(a){
+        if (isPrime(a)==true){
+            alert(a+' Là số nguyên tố');
+        }alert(a+' Không là số nguyên tố');
+    }
+
+    document.write('Các số nguyên tố nhỏ hơn 1000 là :');
+    document.write('<br>');
+    display()
+    let number=+prompt('Nhập số bất kỳ');
+    checkPrime(number);
+</script>
+
+</body>
+</html>
